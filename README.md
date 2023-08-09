@@ -1,3 +1,5 @@
+![Banner](https://github.com/Gerard2par2/gpt-infinite-stories/assets/83214983/508b6b4f-cfc2-4e00-a16e-dab732d1570e)
+
 # Infinite Stories
 
 Infinite Stories is a web app generating text RPGs using OpenAI's GPT.
