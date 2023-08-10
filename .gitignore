@@ -42,3 +42,7 @@ out/
 /gradle/
 /.idea/
 
+=======
+/node_modules
+/package-lock.json
+/out
