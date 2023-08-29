@@ -18,4 +18,4 @@ This is a very simple idea but a very fun game to play, especially with GPT-4.
 - Full story, character & inventory persistence
 - Support for GPT-3.5 and GPT-4 (you need to spend at least 1$ in the API to access GPT-4)
 
-Do you want to be a dragon slayer ? Or maybe be a drug dealer in the darkest alley ways of Novigrad, or a legendary Hacker in 2169 ? With Infinite Stories, you will be able to do it all, and even more.
+Do you want to be a powerful dragon slayer ? Or maybe be a thieve in the darkest alley ways of Novigrad, or a mysterious Hacker in 2169 ? Infinite Stories will allow you to be anything you want.
