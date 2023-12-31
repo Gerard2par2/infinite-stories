@@ -1,0 +1,2 @@
+<fa-icon *ngIf="appContextService.isLightTheme.value" (click)="toggleLightTheme(false)" [icon]="faSun"></fa-icon>
+<fa-icon *ngIf="!appContextService.isLightTheme.value" (click)="toggleLightTheme(true)" [icon]="faMoon"></fa-icon>

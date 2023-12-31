@@ -1,0 +1,10 @@
+@import '/src/styles/variables.scss';
+
+svg {
+  path {
+    fill: color(navbar-background-color) !important;
+    body.light & {
+      fill: color(navbar-background-color, 'light');
+    }
+  }
+}

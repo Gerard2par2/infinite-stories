@@ -1,0 +1,56 @@
+@import '/src/styles/variables.scss';
+
+:host {
+  margin: 1rem;
+  .world-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    align-items: flex-start;
+    width: 20rem;
+    height: 25rem;
+    overflow-y: scroll;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+
+      h2, p, input, select, textarea {
+        margin: 0.25rem !important;
+      }
+
+      h2 {
+        margin-bottom: 0.1rem;
+      }
+
+      input, select, textarea {
+        border: solid 1px color(border-color);
+        body.light & {
+          border: solid 1px color(border-color, 'light');
+        }
+      }
+
+    }
+    .world-card-description  {
+      display: flex;
+      p {
+        max-height: 10rem;
+        overflow-y: scroll;
+      }
+      textarea {
+        height: 7rem;
+        max-height: 7rem;
+      }
+    }
+    .world-card-actions {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+    }
+  }
+}

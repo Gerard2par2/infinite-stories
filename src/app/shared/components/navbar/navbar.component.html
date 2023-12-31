@@ -1,0 +1,13 @@
+<img (click)="navigateToHome()" class="logo"
+     [ngSrc]="appContextService.isLightTheme.value ? './../../../assets/logo-light.svg' : './../../../assets/logo.svg'" alt="logo" width="50" height="50">
+<!--<app-animated-infinity></app-animated-infinity>-->
+
+<button>
+  <a (click)="navigateToWorlds()">Worlds</a>
+</button>
+
+<button>
+  <a (click)="navigateToGames()">Games</a>
+</button>
+
+<app-toggle-light-theme></app-toggle-light-theme>
