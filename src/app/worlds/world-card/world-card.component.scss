@@ -5,11 +5,11 @@
   .world-card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     cursor: pointer;
     align-items: flex-start;
     width: 20rem;
-    height: 25rem;
+    height: 22rem;
     overflow-y: scroll;
 
     div {
@@ -41,8 +41,9 @@
         overflow-y: scroll;
       }
       textarea {
-        height: 7rem;
+        height: 3.2rem;
         max-height: 7rem;
+        max-width: 80%;
       }
     }
     .world-card-actions {

@@ -7,6 +7,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {EraTitlePipe} from "../shared/pipes/era-title.pipe";
 import {SharedModule} from "../shared/shared.module";
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+import { WorldComponent } from './world/world.component';
 
 
 
@@ -14,7 +15,8 @@ import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
   declarations: [
     WorldsComponent,
     WorldCardComponent,
-    CreateWorldComponent
+    CreateWorldComponent,
+    WorldComponent
   ],
   imports: [
     CommonModule,

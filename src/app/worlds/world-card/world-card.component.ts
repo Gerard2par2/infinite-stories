@@ -25,17 +25,19 @@ export class WorldCardComponent implements OnInit {
   ) {
   }
   private readonly defaultOnClick = (world: WorldModel, event?: MouseEvent) => {
+    console.log('onClick')
     event && event.preventDefault();
     this.router.navigate(['worlds', world.id]);
   }
 
   private readonly defaultOnDelete = (world: WorldModel, event?: MouseEvent) => {
+    console.log('onDelete')
     if(event) {
       event.preventDefault();
       event.stopPropagation();
     }
     console.log("onDelete", world);
-    this.worldsService.deleteWorld(world.id);
+    this.worldsService.deleteWorld(world.id).subscribe();
   }
 
   private readonly defaultOnEdit = (world: WorldModel, event?: MouseEvent) => {
@@ -68,6 +70,16 @@ export class WorldCardComponent implements OnInit {
       event.stopPropagation();
     }
     this.isEditing = false;
+  }
+
+  protected onActionsSpamClick(event: MouseEvent) {
+    console.log('onActionsSpanClick')
+    event.preventDefault();
+    event.stopPropagation();
+  }
+
+  protected onInputClick(event: MouseEvent) {
+    event.stopPropagation();
   }
 
   protected readonly faTrash = faTrash;

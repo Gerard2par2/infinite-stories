@@ -1,6 +1,6 @@
 <div class="card world-card" (click)="onClick(world, $event)">
 
-    <span class="world-card-actions">
+    <span class="world-card-actions" (click)="onActionsSpamClick($event)">
       <fa-icon *ngIf="isEditing" class="cancel-icon" [icon]="faTimes" (click)="onCancel(world, $event)"></fa-icon>
       <fa-icon *ngIf="isEditing" class="save-icon" [icon]="faSave" (click)="onSave(world, $event)"></fa-icon>
       <fa-icon class="edit-icon" [icon]="faEdit" (click)="onEdit(world, $event)"></fa-icon>
@@ -12,7 +12,7 @@
       <p *ngIf="!isEditing else nameInput"
         >{{world.name}}</p>
       <ng-template #nameInput>
-        <input type="text" [(ngModel)]="world.name" />
+        <input type="text" (click)="onInputClick($event)" [(ngModel)]="world.name" />
       </ng-template>
     </div>
 
@@ -21,7 +21,7 @@
       <p *ngIf="!isEditing else eraInput"
         >{{ world.era | eraTitle}}</p>
       <ng-template #eraInput>
-        <select [(ngModel)]="world.era" >
+        <select [(ngModel)]="world.era" (click)="onInputClick($event)" >
           <option value="" disabled selected hidden>Choisissez une ère</option>
           <option *ngFor="let era of Object.keys(WorldEraEnum)" [value]="era">{{ era | eraTitle }}</option>
         </select>
@@ -33,7 +33,7 @@
       <p *ngIf="!isEditing else descriptionInput"
         >{{world.description}}</p>
       <ng-template #descriptionInput>
-        <textarea type="text" placeholder="Description" [(ngModel)]="description"></textarea>
+        <textarea (click)="onInputClick($event)" type="text" placeholder="Description" [(ngModel)]="description"></textarea>
       </ng-template>
     </div>
 

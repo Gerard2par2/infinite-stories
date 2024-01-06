@@ -34,6 +34,7 @@ $colors-dark: (
   card-background-color: #2A2A2A,
   card-background-hover-color: #434343,
   card-background-active-color: #2A2A2A,
+  card-background-darker-color: #212121,
   // icons
   icon-color: rgba(255, 255, 255, 0.8),
 );
@@ -72,6 +73,7 @@ $colors-light: (
   card-background-color: #eaeaea,
   card-background-hover-color: #dedede,
   card-background-active-color: #eaeaea,
+  card-background-darker-color:  #f1f1f1,
   // icons
   icon-color: rgba(51, 51, 51, 0.8),
 );
@@ -94,3 +96,8 @@ $title-font-size: 2.5rem;
 
 $subtitle-font-weight: 500;
 $subtitle-font-size: 2rem;
+
+// SIZES
+// Card
+$card-padding-size: 1rem;
+$card-border-radius: 0.25rem

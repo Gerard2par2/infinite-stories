@@ -183,10 +183,10 @@ option:not(last-child) {
 
 .card {
   background-color: color(card-background-color);
-  border-radius: 0.25rem;
+  border-radius: $card-border-radius;
   box-shadow: 0 0 0.5rem color(shadow-color);
   color: color(foreground-color);
-  padding: 1rem;
+  padding: $card-padding-size;
   &:hover {
     scale: 1.05;
     background-color: color(card-background-hover-color);
