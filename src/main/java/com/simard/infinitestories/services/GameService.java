@@ -41,6 +41,9 @@ public class GameService {
     private final PlayerService playerService;
     private final CharacterService characterService;
 
+    // Mappers
+    private final MemoryMapper memoryMapper;
+
     @Autowired
     public GameService(
             GameRepository gameRepository,
@@ -49,7 +52,8 @@ public class GameService {
             WorldService worldService,
             UserService userService,
             PlayerService playerService,
-            CharacterService characterService)
+            CharacterService characterService,
+            MemoryMapper memoryMapper)
     {
         this.gameRepository = gameRepository;
 
@@ -59,6 +63,8 @@ public class GameService {
         this.userService = userService;
         this.playerService = playerService;
         this.characterService = characterService;
+
+        this.memoryMapper = memoryMapper;
     }
 
     public List<Game> findAllByWorldId(Long worldId) {
@@ -157,7 +163,7 @@ public class GameService {
 
     public ResponseEntity<GamePageDto> nextPage(@NotNull Long gameId, String playerMessage) {
         Game game = this.gameRepository.findById(gameId).orElseThrow();
-        List<ChatMessage> messages = MemoryMapper.mapMemoryListToChatMessageList(this.memoryService.getMemoriesByGameId(gameId));
+        List<ChatMessage> messages = this.memoryMapper.mapMemoryListToChatMessageList(this.memoryService.getMemoriesByGameId(gameId));
         messages.add(new ChatMessage(ChatMessageRole.USER.value(), playerMessage));
         return nextPage(game, messages);
     }
