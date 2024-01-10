@@ -13,6 +13,9 @@ public class Game {
     @Column(name = "id", nullable = false)
     private Long id;
 
+    @Column(name= "`name`", length = 50, nullable = false)
+    private String name;
+
     @ManyToOne
     @JoinColumn(name = "world_id", nullable = false)
     private World world;
