@@ -1,7 +1,6 @@
-import {Component, Input, Output} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {EntityCardInputDataModel, EntityFieldInputType} from "../../../models/entity-card.model";
 import {NgModel} from "@angular/forms";
-import {WorldEraEnum} from "../../../models/world.model";
 
 @Component({
   selector: 'app-entity-card-input',

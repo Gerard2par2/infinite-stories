@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {EntityCardInputDataModel, EntityFieldInputType} from "../../models/entity-card.model";
+import {EntityCardInputDataModel} from "../../models/entity-card.model";
 import {faEdit, faSave, faTimes, faTrash} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
