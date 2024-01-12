@@ -1,0 +1,55 @@
+:host {
+  margin: 1rem;
+  .entity-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    cursor: pointer;
+    align-items: flex-start;
+    width: 20rem;
+    height: 22rem;
+    overflow-y: scroll;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+
+      h2, p, ::ng-deep input, ::ng-deep select, ::ng-deep textarea {
+        margin: 0.25rem !important;
+      }
+
+      h2 {
+        margin-bottom: 0.1rem;
+      }
+
+      ::ng-deep input, ::ng-deep select, ::ng-deep textarea {
+        border: solid 1px color(border-color);
+        body.light & {
+          border: solid 1px color(border-color, 'light');
+        }
+      }
+
+    }
+    .entity-card-content  {
+      display: flex;
+      p {
+        max-height: 10rem;
+        overflow-y: scroll;
+      }
+      ::ng-deep textarea {
+        height: 3.2rem;
+        max-height: 7rem;
+        max-width: 80%;
+      }
+    }
+    .entity-card-actions {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<div class="card entity-card" (click)="onClick(entity, $event)">
+
+  <span class="entity-card-actions">
+    <fa-icon *ngIf="isEditing" class="cancel-icon" [icon]="faTimes" (click)="onCancel(entity, $event)"></fa-icon>
+    <fa-icon *ngIf="isEditing" class="save-icon" [icon]="faSave" (click)="onSave(entity, $event)"></fa-icon>
+    <fa-icon class="edit-icon" [icon]="faEdit" (click)="nativeOnEdit(entity, $event)"></fa-icon>
+    <fa-icon class="delete-icon" [icon]="faTrash" (click)="onDelete(entity, $event)"></fa-icon>
+  </span>
+
+  <h1 *ngIf="title" [class]="'entity-card-title ' + entityName + '-card-title'">{{ title }}</h1>
+
+  <div [class]="'entity-card-content ' + entityName + '-card-content'">
+    <div *ngFor="let entityField of fieldsToDisplay" [class]="'entity-card-content ' + entityName + '-card-content'">
+      <h2>{{entityField}}</h2>
+
+      <p *ngIf="!isEditing else fieldEditTemplate">{{ entity[entityField] }}</p>
+
+      <ng-template #fieldEditTemplate>
+        <app-entity-card-input *ngIf="isEditing"></app-entity-card-input>
+      </ng-template>
+    </div>
+  </div>
+
+
+</div>

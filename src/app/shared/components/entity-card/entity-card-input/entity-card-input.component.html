@@ -1,0 +1,14 @@
+<input *ngIf="isDefaultInput()"
+       [type]="inputType"
+       [(ngModel)]="ngModel"
+       [placeholder]="!(inputType === EntityFieldInputType.CHECKBOX) && placeholder"
+       [min]="inputType === EntityFieldInputType.RANGE && min"
+       [max]="inputType === EntityFieldInputType.RANGE && max"
+       [step]="inputType === EntityFieldInputType.RANGE && step">
+
+<textarea *ngIf="isTextAreaInput()" [(ngModel)]="ngModel" [placeholder]="placeholder"></textarea>
+
+<select *ngIf="isSelectInput()" [(ngModel)]="ngModel">
+  <option *ngIf="defaultSelectOptionLabel" value="" disabled selected hidden>{{ defaultSelectOptionLabel }}</option>
+  <option *ngFor="let option of options" [value]="option">{{ option }}</option>
+</select>
